@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import DotGrid from "@/components/DotGrid";
 
 const points = [
   "All services are In-house — no third-party subcontracting",
@@ -26,6 +27,13 @@ export default function WhyChooseUs() {
             className="relative"
           >
             <div className="absolute -inset-4 bg-gradient-to-br from-blue-100/50 to-indigo-100/50 rounded-3xl blur-2xl" />
+            <DotGrid
+              className="absolute bottom-0 right-0 lg:-right-10 z-0 pointer-events-none opacity-30"
+              rows={6}
+              cols={8}
+              dotSize="md"
+              color="slate-300"
+            />
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&q=80"

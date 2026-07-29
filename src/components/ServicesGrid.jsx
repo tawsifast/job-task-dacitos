@@ -85,10 +85,9 @@ export default function ServicesGrid() {
             <motion.div
               key={item.id}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.03 }}
+              whileInView={{ opacity: 1, y: 0, transition: { type: "spring", stiffness: 200, damping: 20, delay: index * 0.03 } }}
               viewport={{ once: true }}
-              whileHover={{ y: -6 }}
+              whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 15 } }}
               className="group relative bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
             >
               {/* Service Image Container (Fixed with Padding & Object-Contain) */}
@@ -103,7 +102,7 @@ export default function ServicesGrid() {
               </div>
 
               {/* Bottom Navy Banner Title */}
-              <div className="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 px-5 py-4 text-center border-t border-slate-100">
+              <div className="bg-slate-900/80 backdrop-blur-sm px-5 py-4 text-center">
                 <h3 className="text-sm font-bold text-white tracking-wide group-hover:text-blue-300 transition-colors">
                   {item.title}
                 </h3>

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
+import DotGrid from "@/components/DotGrid";
 
 const contacts = [
   {
@@ -89,6 +90,14 @@ export default function CTA() {
             className="relative rounded-3xl bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 overflow-hidden p-8 sm:p-10"
           >
             <div className="absolute top-0 right-0 w-60 h-60 bg-white/10 rounded-full blur-[80px] pointer-events-none" />
+            <DotGrid
+              className="absolute bottom-4 left-4 opacity-15"
+              rows={5}
+              cols={6}
+              dotSize="sm"
+              color="slate-300"
+              floating
+            />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-indigo-400/20 rounded-full blur-[80px] pointer-events-none" />
 
             <div className="relative z-10">
@@ -110,7 +119,7 @@ export default function CTA() {
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-5 py-3 font-semibold text-sm bg-white/10 hover:bg-white/20 border border-white/20 text-white rounded-xl transition-all active:scale-95"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-3 font-semibold text-sm bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white rounded-xl transition-all active:scale-95"
                 >
                   <span>Contact Form</span>
                   <ArrowRight className="w-4 h-4" />

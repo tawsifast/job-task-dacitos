@@ -49,17 +49,16 @@ export default function ServicePartners() {
             <motion.div
               key={partner.id}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              whileInView={{ opacity: 1, y: 0, transition: { type: "spring", stiffness: 200, damping: 20, delay: index * 0.08 } }}
               viewport={{ once: true }}
-              whileHover={{ y: -6 }}
+              whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 15 } }}
               className="group bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
             >
               {/* Logo Area with Top Badge */}
-              <div className="relative h-56 sm:h-64 w-full p-8 flex items-center justify-center bg-gradient-to-b from-slate-100/70 to-slate-50">
+              <div className="relative h-56 sm:h-64 w-full p-8 flex items-center justify-center bg-white/60 backdrop-blur-sm">
                 
                 {/* Category Badge */}
-                <span className="absolute top-4 left-4 bg-blue-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-sm">
+                <span className="absolute top-4 left-4 bg-blue-600/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-sm">
                   {partner.badge}
                 </span>
 

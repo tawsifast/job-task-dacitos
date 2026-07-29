@@ -102,7 +102,7 @@ export default function OurStrengthPage() {
                 <motion.div
                   key={i}
                   variants={itemVariants}
-                  whileHover={{ y: -4 }}
+                  whileHover={{ y: -4, transition: { type: "spring", stiffness: 300, damping: 15 } }}
                   className="group p-6 sm:p-8 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-blue-200/80 transition-all duration-300"
                 >
                   <div className="p-3 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 text-blue-600 border border-blue-100/50 inline-flex group-hover:scale-110 group-hover:from-blue-100 group-hover:to-indigo-100 transition-all duration-300 mb-5">

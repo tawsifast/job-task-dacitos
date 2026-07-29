@@ -147,7 +147,7 @@ export default function OurClientsSection() {
           </div>
 
           {/* Quick Metrics Bar */}
-          <div className="grid grid-cols-3 gap-3 bg-white p-3 rounded-2xl border border-slate-200/80 shadow-sm shrink-0">
+          <div className="grid grid-cols-3 gap-3 bg-white/70 backdrop-blur-md p-3 rounded-2xl border border-white/20 shadow-sm shrink-0">
             <div className="text-center px-3 py-1">
               <span className="block text-xl font-extrabold text-slate-900">200+</span>
               <span className="text-[11px] text-slate-500 font-medium">Clients</span>
@@ -175,7 +175,7 @@ export default function OurClientsSection() {
                 className={`relative shrink-0 px-2 py-1.5 sm:px-4 sm:py-2.5 rounded-xl text-[11px] sm:text-sm font-bold whitespace-nowrap transition-all duration-200 ${
                   activeCategory === cat.id
                     ? "bg-slate-900 text-white shadow-md shadow-slate-900/10"
-                    : "bg-white text-slate-600 hover:bg-slate-100 hover:text-slate-900 border border-slate-200/80"
+                    : "bg-white/60 backdrop-blur-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 border border-white/30"
                 }`}
               >
                 {cat.label}
@@ -216,10 +216,9 @@ export default function OurClientsSection() {
                 key={client.id}
                 layout
                 initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1, transition: { type: "spring", stiffness: 250, damping: 20 } }}
                 exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.2 }}
-                whileHover={{ y: -4 }}
+                whileHover={{ y: -4, transition: { type: "spring", stiffness: 300, damping: 15 } }}
                 className="group bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
               >
                 <div className="flex items-start justify-between gap-3">

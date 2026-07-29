@@ -62,7 +62,7 @@ export default function GalleryPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-white/90 text-slate-700">
+                    <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-white/80 backdrop-blur-sm text-slate-700">
                       {img.title}
                     </span>
                   </div>

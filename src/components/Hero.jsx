@@ -5,6 +5,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ChevronLeft, ChevronRight, CheckCircle, Shield, Sparkles, Wrench, Leaf, Bug, Headphones, Car, Building2 } from "lucide-react";
 import Link from "next/link";
 
+const containerVariants = {
+  enter: { transition: { staggerChildren: 0.07, delayChildren: 0.1 } },
+  exit: { transition: { staggerChildren: 0.03, staggerDirection: -1 } },
+};
+
+const childVariants = {
+  enter: { opacity: 0, y: 30 },
+  center: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -20 },
+};
+
 const banners = [
   {
     icon: Building2,
@@ -126,16 +137,24 @@ export default function Hero() {
           initial="enter"
           animate="center"
           exit="exit"
-          transition={{ duration: 0.5, ease: "easeInOut" }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
           className="absolute inset-0"
         >
-          <Image
-            src={banner.image}
-            alt={banner.title}
-            fill
-            className="object-cover"
-            priority
-          />
+          <motion.div
+            className="absolute inset-0"
+            key={`zoom-${current}`}
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 6, ease: "easeOut" }}
+          >
+            <Image
+              src={banner.image}
+              alt={banner.title}
+              fill
+              className="object-cover"
+              priority
+            />
+          </motion.div>
         </motion.div>
       </AnimatePresence>
 
@@ -147,50 +166,59 @@ export default function Hero() {
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
               key={`content-${current}`}
-              custom={direction}
-              variants={slideVariants}
+              variants={containerVariants}
               initial="enter"
               animate="center"
               exit="exit"
-              transition={{ duration: 0.4, ease: "easeInOut" }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-white/10 border border-white/20 text-blue-200 backdrop-blur-sm mb-6">
-                <CheckCircle className="w-3.5 h-3.5" />
-                <span>{banner.badge}</span>
-              </div>
-
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 rounded-xl bg-white/10 border border-white/20 text-blue-300 backdrop-blur-sm">
-                  <banner.icon className="w-6 h-6" />
+              <motion.div variants={childVariants} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-white/10 border border-white/20 text-blue-200 backdrop-blur-sm mb-6">
+                  <CheckCircle className="w-3.5 h-3.5" />
+                  <span>{banner.badge}</span>
                 </div>
-              </div>
+              </motion.div>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] font-heading text-white">
-                {banner.title}.{" "}
-                <span className="text-blue-300">
-                  {banner.highlight}
-                </span>
-              </h1>
+              <motion.div variants={childVariants} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 rounded-xl bg-white/10 border border-white/20 text-blue-300 backdrop-blur-sm">
+                    <banner.icon className="w-6 h-6" />
+                  </div>
+                </div>
+              </motion.div>
 
-              <p className="mt-6 text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
-                {banner.desc}
-              </p>
+              <motion.div variants={childVariants} transition={{ type: "spring", stiffness: 280, damping: 22 }}>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] font-heading text-white">
+                  {banner.title}.{" "}
+                  <span className="text-blue-300">
+                    {banner.highlight}
+                  </span>
+                </h1>
+              </motion.div>
 
-              <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/services"
-                  className="group px-6 py-3.5 font-semibold text-sm bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 rounded-xl text-white transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 active:scale-95"
-                >
-                  <span>Explore Services</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="px-6 py-3.5 font-semibold text-sm bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white transition-all active:scale-95 backdrop-blur-sm"
-                >
-                  Request a Quote
-                </Link>
-              </div>
+              <motion.div variants={childVariants} transition={{ type: "spring", stiffness: 260, damping: 22 }}>
+                <p className="mt-6 text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+                  {banner.desc}
+                </p>
+              </motion.div>
+
+              <motion.div variants={childVariants} transition={{ type: "spring", stiffness: 240, damping: 20 }}>
+                <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href="/services"
+                    className="group px-6 py-3.5 font-semibold text-sm bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 rounded-xl text-white transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 active:scale-95"
+                  >
+                    <span>Explore Services</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition" />
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="px-6 py-3.5 font-semibold text-sm bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white transition-all active:scale-95 backdrop-blur-sm"
+                  >
+                    Request a Quote
+                  </Link>
+                </div>
+              </motion.div>
             </motion.div>
           </AnimatePresence>
         </div>

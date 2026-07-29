@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowRight, Building2, MapPin, Users } from "lucide-react";
+import DotGrid from "@/components/DotGrid";
 
 const highlights = [
   { icon: Users, value: "15,000+", label: "Work Force" },
@@ -85,6 +86,13 @@ export default function About() {
             className="relative"
           >
             <div className="absolute -inset-4 bg-gradient-to-br from-blue-100/50 to-indigo-100/50 rounded-3xl blur-2xl" />
+            <DotGrid
+              className="absolute top-0 left-0 lg:-left-12 z-0 pointer-events-none opacity-40"
+              rows={8}
+              cols={10}
+              dotSize="md"
+              color="slate-300"
+            />
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80"
@@ -101,7 +109,7 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 }}
               viewport={{ once: true }}
-              className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-xl border border-slate-200/80 max-w-[200px] z-20"
+              className="absolute -bottom-6 -left-6 bg-white/70 backdrop-blur-md rounded-2xl p-5 shadow-xl border border-white/20 max-w-[200px] z-20"
             >
               <div className="text-2xl font-extrabold text-blue-600 font-heading">
                 20M+

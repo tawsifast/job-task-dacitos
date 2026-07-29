@@ -42,8 +42,7 @@ export default function Stats() {
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              whileInView={{ opacity: 1, y: 0, transition: { type: "spring", stiffness: 200, damping: 20, delay: i * 0.1 } }}
               viewport={{ once: true, margin: "-50px" }}
               className="group relative p-6 sm:p-8 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300"
             >
