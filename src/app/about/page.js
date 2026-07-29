@@ -39,7 +39,7 @@ export default function AboutPage() {
         label="About Us"
         title="A Heritage of"
         highlight="Excellence"
-        subtitle="From a vision to India's trusted property management partner — our journey of two decades defined by commitment and service excellence."
+        subtitle="From a vision to India's trusted property management partner — two decades of commitment and service excellence."
         image="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=85"
       />
 

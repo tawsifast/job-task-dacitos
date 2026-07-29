@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
 import PageBanner from "@/components/PageBanner";
+import ContactMapSection from "@/components/ContactMapSection";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -19,7 +20,7 @@ export default function ContactPage() {
         title="Get in"
         highlight="Touch"
         subtitle="Have a question about our services? Want to request a quote? We'd love to hear from you."
-        image="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1600&q=85"
+        image="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=85"
       />
 
       <section className="py-16 sm:py-20 bg-white">
@@ -175,17 +176,12 @@ export default function ContactPage() {
                 })}
               </div>
 
-              <div className="mt-8 rounded-2xl overflow-hidden shadow-sm border border-slate-200 h-[250px] bg-slate-100 flex items-center justify-center">
-                <div className="text-center text-slate-400">
-                  <MapPin className="w-8 h-8 mx-auto mb-2" />
-                  <p className="text-sm">Map Integration</p>
-                  <p className="text-xs">Cyberabad, Hyderabad</p>
-                </div>
-              </div>
             </motion.div>
           </div>
         </div>
       </section>
+
+      <ContactMapSection />
     </div>
   );
 }

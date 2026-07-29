@@ -33,7 +33,7 @@ export default function OurStrengthPage() {
       <PageBanner
         label="Our Strength"
         title="What Sets Us Apart"
-        subtitle="Decades of experience, thousands of trained professionals, and an unwavering commitment to service excellence — discover what makes AmazePMS the preferred partner for 200+ enterprises."
+        subtitle="Decades of experience, thousands of trained professionals, and unwavering service excellence — trusted by 200+ enterprises."
         image="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=85"
       />
 

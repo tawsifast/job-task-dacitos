@@ -1,31 +1,55 @@
 "use client";
-import { Building2, Code, Cloud, Database, Shield, Cpu } from "lucide-react";
+import React from "react";
 
 const logos = [
-  { name: "Tech Mahindra", Icon: Cpu },
-  { name: "Infosys", Icon: Code },
-  { name: "Wipro", Icon: Cloud },
-  { name: "HCL", Icon: Database },
-  { name: "L&T", Icon: Building2 },
-  { name: "Amazon", Icon: Cloud },
-  { name: "Google", Icon: Database },
-  { name: "Microsoft", Icon: Code },
-  { name: "Dell", Icon: Cpu },
-  { name: "IBM", Icon: Shield },
-  { name: "Cognizant", Icon: Code },
-  { name: "Accenture", Icon: Building2 },
-  { name: "Tech Mahindra", Icon: Cpu },
-  { name: "Infosys", Icon: Code },
-  { name: "Wipro", Icon: Cloud },
-  { name: "HCL", Icon: Database },
-  { name: "L&T", Icon: Building2 },
-  { name: "Amazon", Icon: Cloud },
-  { name: "Google", Icon: Database },
-  { name: "Microsoft", Icon: Code },
-  { name: "Dell", Icon: Cpu },
-  { name: "IBM", Icon: Shield },
-  { name: "Cognizant", Icon: Code },
-  { name: "Accenture", Icon: Building2 },
+  {
+    name: "Tech Mahindra",
+    icon: "https://companieslogo.com/img/orig/TECHM.NS_BIG-0b6d62d5.png",
+  },
+  {
+    name: "Infosys",
+    icon: "https://cdn.simpleicons.org/infosys",
+  },
+  {
+    name: "Wipro",
+    icon: "https://cdn.simpleicons.org/wipro",
+  },
+  {
+    name: "HCL Technologies",
+    icon: "https://companieslogo.com/img/orig/HCLTECH.NS_BIG-4e0e55d4.png",
+  },
+  {
+    name: "Larsen & Toubro",
+    icon: "https://companieslogo.com/img/orig/LT.NS_BIG-9d55f82b.png",
+  },
+  {
+    name: "Amazon",
+    icon: "https://cdn.simpleicons.org/amazon",
+  },
+  {
+    name: "Google",
+    icon: "https://cdn.simpleicons.org/google",
+  },
+  {
+    name: "Microsoft",
+    icon: "https://cdn.simpleicons.org/microsoft",
+  },
+  {
+    name: "Dell",
+    icon: "https://cdn.simpleicons.org/dell",
+  },
+  {
+    name: "IBM",
+    icon: "https://cdn.simpleicons.org/ibm",
+  },
+  {
+    name: "Cognizant",
+    icon: "https://companieslogo.com/img/orig/CTSH_BIG-1a7d0a6f.png",
+  },
+  {
+    name: "Accenture",
+    icon: "https://cdn.simpleicons.org/accenture",
+  },
 ];
 
 export default function Clients() {
@@ -45,22 +69,23 @@ export default function Clients() {
 
         <div className="flex overflow-hidden">
           <div className="flex gap-12 sm:gap-16 items-center animate-marquee-right py-2">
-            {logos.map((item, i) => {
-              const Icon = item.Icon;
-              return (
-                <div
-                  key={i}
-                  className="shrink-0 flex items-center gap-3 px-5 py-2.5 rounded-xl bg-white border border-slate-200/60 shadow-sm hover:shadow-md hover:border-blue-200/60 transition-all"
-                >
-                  <div className="p-1.5 rounded-lg bg-gradient-to-br from-blue-50 to-indigo-50 text-blue-500">
-                    <Icon className="w-4 h-4" />
-                  </div>
-                  <span className="text-sm font-bold text-slate-400 whitespace-nowrap tracking-tight">
-                    {item.name}
-                  </span>
+            {logos.map((item, i) => (
+              <div
+                key={i}
+                className="shrink-0 flex items-center gap-3 px-5 py-2.5 rounded-xl bg-white border border-slate-200/60 shadow-sm hover:shadow-md hover:border-blue-200/60 transition-all"
+              >
+                <div className="p-1.5 rounded-lg bg-slate-50 flex items-center justify-center">
+                  <img
+                    src={item.icon}
+                    alt={item.name}
+                    className="w-5 h-5 object-contain"
+                  />
                 </div>
-              );
-            })}
+                <span className="text-sm font-bold text-slate-700 whitespace-nowrap tracking-tight">
+                  {item.name}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

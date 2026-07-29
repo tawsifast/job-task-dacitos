@@ -8,66 +8,66 @@ import Link from "next/link";
 const banners = [
   {
     icon: Building2,
-    badge: "Managing 20M+ Sq. Ft. Across India",
-    title: "Amaze Property Management Solutions",
-    highlight: "One Stop for All Your Property Needs",
-    desc: "Next-generation facility management combining hard technical services, smart housekeeping, security, and enterprise property operations — all in-house across PAN India.",
+    badge: "20M+ Sq. Ft. Managed",
+    title: "Amaze Property Management",
+    highlight: "One Stop for All Property Needs",
+    desc: "Hard services, housekeeping, security & property ops — all in-house.",
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=85",
   },
   {
     icon: Shield,
-    badge: "24/7 Protection | Security Services",
-    title: "Comprehensive Security Solutions",
-    highlight: "Trained Professionals. Round-the-Clock Vigilance.",
-    desc: "Armed and unarmed guarding, CCTV surveillance, access control systems, fire safety drills, and executive escort services by ex-service personnel.",
+    badge: "24/7 Security",
+    title: "Security Solutions",
+    highlight: "Trained Professionals. Round-the-Clock.",
+    desc: "Armed guarding, CCTV, access control & fire safety.",
     image: "https://images.unsplash.com/photo-1558002038-1055907df827?w=1600&q=85",
   },
   {
     icon: Sparkles,
-    badge: "Soft Services | Housekeeping",
-    title: "Smart Housekeeping & Janitorial",
-    highlight: "Eco-Friendly. Mechanized. Impeccable.",
-    desc: "Professional deep cleaning, facade cleaning, mechanized floor care, waste management, and sanitization using eco-friendly solutions and advanced equipment.",
+    badge: "Housekeeping",
+    title: "Smart Housekeeping",
+    highlight: "Eco-Friendly. Mechanized.",
+    desc: "Deep cleaning, floor care, waste management & sanitization.",
     image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1600&q=85",
   },
   {
     icon: Wrench,
-    badge: "Hard Services | Technical Engineering",
-    title: "MEP & Technical Engineering",
-    highlight: "Mechanical. Electrical. Plumbing. HVAC.",
-    desc: "Comprehensive operations for Mechanical, Electrical, Plumbing, HVAC systems, STP/WTP water treatment plants, and energy optimization audits by certified technicians.",
+    badge: "Technical Engineering",
+    title: "MEP Engineering",
+    highlight: "Mechanical. Electrical. HVAC.",
+    desc: "HVAC, plumbing, STP/WTP & energy audits.",
     image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1600&q=85",
   },
   {
     icon: Leaf,
-    badge: "Soft Services | Landscaping",
-    title: "Landscaping & Gardening",
-    highlight: "Green Spaces. Sustainable Beauty.",
-    desc: "Professional horticulture services, lawn maintenance, garden design, irrigation systems, and green space management for corporate campuses and parks.",
+    badge: "Landscaping",
+    title: "Gardening & Landscape",
+    highlight: "Green Spaces. Sustainable.",
+    desc: "Horticulture, lawn care, garden design & irrigation.",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1600&q=85",
   },
   {
     icon: Bug,
-    badge: "Specialized | Pest Control",
-    title: "Integrated Pest Management",
-    highlight: "Safe. Eco-Friendly. Effective.",
-    desc: "General pest control, termite treatment, rodent management, fumigation, mosquito control, and preventive maintenance with eco-friendly treatments for commercial properties.",
+    badge: "Pest Control",
+    title: "Pest Management",
+    highlight: "Safe. Eco-Friendly.",
+    desc: "Termite treatment, fumigation & mosquito control.",
     image: "https://images.unsplash.com/photo-1632935318671-9cb8c88f50a0?w=1600&q=85",
   },
   {
     icon: Headphones,
-    badge: "Operations | Help Desk Management",
+    badge: "Tenant Support",
     title: "Corporate & Tenant Support",
-    highlight: "Seamless Operations. Happy Tenants.",
-    desc: "Help desk management, tenant relationship management, event support, swimming pool and clubhouse facility management for corporate parks and residential complexes.",
+    highlight: "Seamless Operations.",
+    desc: "Help desk, tenant relations, event & clubhouse management.",
     image: "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=1600&q=85",
   },
   {
     icon: Car,
-    badge: "Operations | Parking Management",
-    title: "Smart Parking Solutions",
-    highlight: "Efficient Traffic Flow. Maximum Utilization.",
-    desc: "Professional parking management, traffic control, valet services, automated entry/exit systems, and security patrolling for commercial and residential properties.",
+    badge: "Parking Management",
+    title: "Smart Parking",
+    highlight: "Efficient Traffic Flow.",
+    desc: "Traffic control, valet & automated entry/exit systems.",
     image: "https://images.unsplash.com/photo-1478860409698-8707f313ee8b?w=1600&q=85",
   },
 ];
@@ -117,7 +117,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-slate-900 pt-16 sm:pt-20">
+    <section className="relative min-h-[80vh] flex flex-col justify-center overflow-hidden bg-slate-900 pt-16 sm:pt-20">
       <AnimatePresence custom={direction}>
         <motion.div
           key={current}
@@ -181,7 +181,7 @@ export default function Hero() {
                   href="/services"
                   className="group px-6 py-3.5 font-semibold text-sm bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 rounded-xl text-white transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 active:scale-95"
                 >
-                  <span>Explore Enterprise Solutions</span>
+                  <span>Explore Services</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition" />
                 </Link>
                 <Link

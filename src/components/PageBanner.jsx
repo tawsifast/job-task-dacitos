@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function PageBanner({ label, title, subtitle, image, highlight, fullHeight }) {
   return (
     <section className={`relative flex items-center justify-center overflow-hidden pt-16 sm:pt-20 ${
-      fullHeight ? "min-h-screen" : "min-h-[60vh] sm:min-h-[70vh]"
+      fullHeight ? "min-h-screen" : "min-h-[80vh]"
     }`}>
       <Image
         src={image}
