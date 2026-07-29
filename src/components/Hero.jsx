@@ -199,16 +199,16 @@ export default function Hero() {
       <button
         onClick={prev}
         aria-label="Previous banner"
-        className="absolute left-8 sm:left-14 top-1/2 -translate-y-1/2 z-30 p-2.5 sm:p-3 rounded-full bg-white/90 hover:bg-white shadow-lg hover:shadow-xl text-slate-700 hover:text-blue-600 transition-all active:scale-90"
+        className="absolute left-8 sm:left-14 top-1/2 -translate-y-1/2 z-30 p-2.5 sm:p-3 rounded-full bg-transparent text-white/70 hover:text-white transition-all active:scale-90"
       >
-        <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+        <ChevronLeft className="w-6 h-6 sm:w-9 sm:h-9" />
       </button>
       <button
         onClick={next}
         aria-label="Next banner"
-        className="absolute right-8 sm:right-14 top-1/2 -translate-y-1/2 z-30 p-2.5 sm:p-3 rounded-full bg-white/90 hover:bg-white shadow-lg hover:shadow-xl text-slate-700 hover:text-blue-600 transition-all active:scale-90"
+        className="absolute right-8 sm:right-14 top-1/2 -translate-y-1/2 z-30 p-2.5 sm:p-3 rounded-full bg-transparent text-white/70 hover:text-white transition-all active:scale-90"
       >
-        <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+        <ChevronRight className="w-6 h-6 sm:w-9 sm:h-9" />
       </button>
 
       <div className="absolute bottom-6 sm:bottom-8 inset-x-0 flex items-center justify-center gap-2 z-20">

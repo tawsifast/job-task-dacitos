@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -101,12 +101,6 @@ export default function OurClientsSection() {
     const start = (currentPage - 1) * ITEMS_PER_PAGE;
     return filteredClients.slice(start, start + ITEMS_PER_PAGE);
   }, [filteredClients, currentPage]);
-
-  // Reset to page 1 when category or search changes
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [activeCategory, searchQuery]);
-
   const goToPage = (page) => {
     setCurrentPage(Math.max(1, Math.min(page, totalPages)));
   };
@@ -177,7 +171,7 @@ export default function OurClientsSection() {
             {categories.map((cat) => (
               <button
                 key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
+                onClick={() => { setActiveCategory(cat.id); setCurrentPage(1); }}
                 className={`relative shrink-0 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all duration-200 ${
                   activeCategory === cat.id
                     ? "bg-slate-900 text-white shadow-md shadow-slate-900/10"
@@ -195,7 +189,7 @@ export default function OurClientsSection() {
               type="text"
               placeholder="Search client name..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+               onChange={(e) => { setSearchQuery(e.target.value); setCurrentPage(1); }}
               className="w-full bg-white text-slate-900 text-sm pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 transition-all shadow-sm"
             />
             <svg

@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   PieChart,
@@ -139,10 +140,12 @@ export default function ClientDistribution() {
                 whileHover={{ scale: 1.05 }}
                 className="h-10 sm:h-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300"
               >
-                <img
+                <Image
                   src={logo.url}
                   alt={logo.name}
-                  className="max-h-full max-w-[120px] object-contain"
+                  width={120}
+                  height={40}
+                  className="max-h-full max-w-[120px] object-contain w-auto h-auto"
                 />
               </motion.div>
             ))}

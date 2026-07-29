@@ -75,8 +75,8 @@ export default function ContactMapSection() {
                 </div>
                 <div>
                   <h3 className="text-sm font-bold text-slate-800 mb-1">Email</h3>
-                  <a href="mailto:info@amazepms.com" className="text-sm text-blue-600 hover:underline block">
-                    info@amazepms.com
+                  <a href="mailto:Info@amazepms.com" className="text-sm text-blue-600 hover:underline block">
+                    Info@amazepms.com
                   </a>
                 </div>
               </div>

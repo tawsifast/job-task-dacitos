@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Target, Eye, Heart, Building2, Users, Shield, Wrench, Leaf, Bug, Sparkles, Headphones, Car } from "lucide-react";
+import { Target, Eye, Heart, Building2, Users, Shield, Wrench, Leaf, Bug, Sparkles, Car } from "lucide-react";
 import AboutSection from "@/components/About";
 import PageBanner from "@/components/PageBanner";
 

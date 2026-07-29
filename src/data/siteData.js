@@ -6,8 +6,6 @@ import {
   Leaf,
   Bug,
   Headphones,
-  Car,
-  Waves,
   ClipboardCheck,
   Users,
   Award,
@@ -17,7 +15,6 @@ import {
   Target,
   Heart,
   Star,
-  Quote,
 } from "lucide-react";
 
 export const navLinks = [

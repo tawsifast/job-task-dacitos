@@ -6,7 +6,7 @@ import { MapPin, Mail, Phone } from "lucide-react";
 const socials = [
   {
     name: "Facebook",
-    href: "https://facebook.com/amazepms",
+    href: "https://www.facebook.com/dacitos",
     bg: "bg-[#1877F2]",
     hover: "hover:bg-[#1877F2]/90",
     icon: (
@@ -17,7 +17,7 @@ const socials = [
   },
   {
     name: "Instagram",
-    href: "https://instagram.com/amazepms",
+    href: "https://www.instagram.com/dacitos_technologies",
     bg: "bg-[#E4405F]",
     hover: "hover:bg-[#E4405F]/90",
     icon: (
@@ -28,7 +28,7 @@ const socials = [
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/company/amazepms",
+    href: "https://www.linkedin.com/company/dacitos_technologies",
     bg: "bg-[#0A66C2]",
     hover: "hover:bg-[#0A66C2]/90",
     icon: (
@@ -49,7 +49,7 @@ export default function TopContactBar() {
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="fixed top-0 inset-x-0 z-[60] bg-[#0a192f] text-slate-200 h-13"
+      className="fixed top-0 inset-x-0 z-[60] bg-[#0a192f] text-slate-200 h-12"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
         <div className="hidden lg:flex items-center gap-2 text-xs text-slate-400 min-w-0">

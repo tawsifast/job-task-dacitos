@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const socials = [
   {
     name: "Facebook",
-    href: "https://facebook.com/amazepms",
+    href: "https://www.facebook.com/dacitos",
     color: "#1877F2",
     icon: (
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -14,7 +14,7 @@ const socials = [
   },
   {
     name: "Instagram",
-    href: "https://instagram.com/amazepms",
+    href: "https://www.instagram.com/dacitos_technologies",
     color: "#E4405F",
     icon: (
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -24,7 +24,7 @@ const socials = [
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/company/amazepms",
+    href: "https://www.linkedin.com/company/dacitos_technologies",
     color: "#0A66C2",
     icon: (
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

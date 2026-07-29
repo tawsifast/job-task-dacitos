@@ -16,8 +16,9 @@ export default function About() {
   const isAboutPage = pathname === "/about";
   
   return (
-    // FIX: Changed py-20/24 to pt-32 sm:pt-36 pb-20 sm:pb-24 so content sits below fixed navbar
-    <section id="about" className="pt-32 sm:pt-36 pb-20 sm:pb-24 bg-slate-50/80 relative overflow-hidden">
+    <section id="about" className={`pb-20 sm:pb-24 bg-slate-50/80 relative overflow-hidden ${
+      isAboutPage ? "pt-20 sm:pt-24" : "pt-16 sm:pt-20"
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <motion.div

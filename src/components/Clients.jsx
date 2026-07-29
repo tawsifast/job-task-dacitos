@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 
 const logos = [
@@ -75,9 +76,11 @@ export default function Clients() {
                 className="shrink-0 flex items-center gap-3 px-5 py-2.5 rounded-xl bg-white border border-slate-200/60 shadow-sm hover:shadow-md hover:border-blue-200/60 transition-all"
               >
                 <div className="p-1.5 rounded-lg bg-slate-50 flex items-center justify-center">
-                  <img
+                  <Image
                     src={item.icon}
                     alt={item.name}
+                    width={20}
+                    height={20}
                     className="w-5 h-5 object-contain"
                   />
                 </div>
