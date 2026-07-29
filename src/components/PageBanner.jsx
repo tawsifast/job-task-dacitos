@@ -2,10 +2,10 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function PageBanner({ label, title, subtitle, image, highlight, fullHeight }) {
+export default function PageBanner({ label, title, subtitle, image, highlight, fullHeight, smallTitle }) {
   return (
     <section className={`relative flex items-center justify-center overflow-hidden pt-[112px] sm:pt-[128px] ${
-      fullHeight ? "min-h-screen" : "min-h-[80vh]"
+      fullHeight ? "min-h-screen" : "min-h-[90vh]"
     }`}>
       <Image
         src={image}
@@ -28,7 +28,11 @@ export default function PageBanner({ label, title, subtitle, image, highlight, f
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight font-heading text-white"
+          className={`font-extrabold tracking-tight font-heading text-white ${
+            smallTitle
+              ? "text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+              : "text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+          }`}
         >
           {title}{highlight && <span className="text-blue-300"> {highlight}</span>}
         </motion.h1>

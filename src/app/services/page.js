@@ -14,6 +14,7 @@ export default function ServicesPage() {
         title="Comprehensive Property Management"
         subtitle="From technical engineering to soft services — all delivered in-house by 15,000+ trained professionals."
         image="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=85"
+        smallTitle
       />
 
       <ServicesGrid />
