@@ -13,7 +13,7 @@ const logos = [
   },
   {
     name: "Wipro",
-    icon: "https://cdn.simpleicons.org/wipro",
+    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvl347dJXziQgOWmjAcoXNXDQIYtXU8BlJO1agURcw8g&s",
   },
   {
     name: "HCL Technologies",
@@ -29,7 +29,7 @@ const logos = [
   },
   {
     name: "Google",
-    icon: "https://cdn.simpleicons.org/google",
+    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5_vI-lOAFz1snJPyzNdjWeK5x4dyCZCfUvSGmyD7E9gOJikd6-88c9GxY&s=10",
   },
   {
     name: "Microsoft",
@@ -37,7 +37,7 @@ const logos = [
   },
   {
     name: "Dell",
-    icon: "https://cdn.simpleicons.org/dell",
+    icon: "https://cdn.vectorstock.com/i/1000v/22/43/dell-brand-logo-computer-symbol-white-design-vector-46352243.jpg",
   },
   {
     name: "IBM",
