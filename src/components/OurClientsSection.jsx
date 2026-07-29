@@ -167,12 +167,12 @@ export default function OurClientsSection() {
         <div className="flex flex-col md:flex-row gap-4 justify-between items-center mb-10">
           
           {/* Scrollable Category Filter Pills */}
-          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar">
+          <div className="flex items-center gap-1.5 overflow-x-auto pb-2 filter-scroll w-full max-w-full">
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => { setActiveCategory(cat.id); setCurrentPage(1); }}
-                className={`relative shrink-0 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all duration-200 ${
+                className={`relative shrink-0 px-2 py-1.5 sm:px-4 sm:py-2.5 rounded-xl text-[11px] sm:text-sm font-bold whitespace-nowrap transition-all duration-200 ${
                   activeCategory === cat.id
                     ? "bg-slate-900 text-white shadow-md shadow-slate-900/10"
                     : "bg-white text-slate-600 hover:bg-slate-100 hover:text-slate-900 border border-slate-200/80"

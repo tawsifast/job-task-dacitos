@@ -24,9 +24,9 @@ const distributionData = [
 
 // Top Featured Client Logos
 const featuredLogos = [
-  { name: "JLL", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/JLL_logo.svg/512px-JLL_logo.svg.png" },
+  { name: "JLL", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRezw1q9RXoezE4fwZphceyC_nhbFThTmFYetrW3W0dAA&s=10" },
   { name: "Mahindra Lifespaces", url: "https://cdn-icons-png.flaticon.com/512/2422/2422601.png" },
-  { name: "CBRE", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/CBRE_Group_logo.svg/512px-CBRE_Group_logo.svg.png" },
+  { name: "CBRE", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKSGNF4jZB-8zG6NL22NfIX8V26_5iy9Prf3dDVj6pfo9osE4oiVIt5IMQ&s=10" },
   { name: "Kalpataru", url: "https://cdn-icons-png.flaticon.com/512/619/619032.png" },
   { name: "Tech Mahindra", url: "https://cdn-icons-png.flaticon.com/512/1055/1055687.png" },
 ];

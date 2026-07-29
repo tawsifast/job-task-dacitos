@@ -59,6 +59,17 @@
   animation: fadeIn 0.4s ease-out;
 }
 
+.filter-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+.filter-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.filter-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 99px;
+}
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
