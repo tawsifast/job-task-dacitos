@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { MapPin, Clock, Briefcase, ArrowRight, Heart, Users, TrendingUp } from "lucide-react";
 import Link from "next/link";
 import { careers } from "@/data/siteData";
+import PageBanner from "@/components/PageBanner";
 
 const perks = [
   {
@@ -24,30 +25,14 @@ const perks = [
 
 export default function CareersPage() {
   return (
-    <div className="pt-24 sm:pt-28">
-      <section className="py-16 sm:py-20 bg-slate-50/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-3xl"
-          >
-            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-blue-50 border border-blue-200 text-blue-700 mb-4">
-              Careers
-            </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight font-heading leading-tight">
-              Join the{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent">
-                AmazePMS Team
-              </span>
-            </h1>
-            <p className="mt-6 text-lg text-slate-500 leading-relaxed max-w-2xl">
-              Be part of India&apos;s leading property management company with
-              15,000+ professionals. Grow your career with us.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+    <div>
+      <PageBanner
+        label="Careers"
+        title="Join the"
+        highlight="AmazePMS Team"
+        subtitle="Be part of a 15,000+ strong family dedicated to excellence in property management across India."
+        image="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=85"
+      />
 
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

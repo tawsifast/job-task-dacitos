@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowRight, Building2, MapPin, Users } from "lucide-react";
 
@@ -11,9 +12,13 @@ const highlights = [
 ];
 
 export default function About() {
+  const pathname = usePathname();
+  const isAboutPage = pathname === "/about";
+  
   return (
-    <section id="about" className="py-20 sm:py-24 bg-slate-50/80 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    // FIX: Changed py-20/24 to pt-32 sm:pt-36 pb-20 sm:pb-24 so content sits below fixed navbar
+    <section id="about" className="pt-32 sm:pt-36 pb-20 sm:pb-24 bg-slate-50/80 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -24,19 +29,19 @@ export default function About() {
             <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-blue-50 border border-blue-200 text-blue-700 mb-4">
               About Us
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight font-heading leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight font-heading leading-tight text-slate-900">
               A Heritage of{" "}
               <span className="bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent">
                 Excellence in Property Management
               </span>
             </h2>
-            <p className="mt-6 text-slate-500 text-base leading-relaxed">
+            <p className="mt-6 text-slate-600 text-base leading-relaxed">
               Amaze PMS Pvt Ltd (AMAZE) is a Property Management division of
               ACTION GROUP of Companies, founded in 2001 by Mr. Subhani Abdul —
               a veteran from the Indian Navy, a Certified Security Practitioner,
               and a renowned name in the Service Industry.
             </p>
-            <p className="mt-4 text-slate-500 text-base leading-relaxed">
+            <p className="mt-4 text-slate-600 text-base leading-relaxed">
               Headquartered in Cyberabad, Telangana, we provide PAN INDIA
               Property Management Solutions, partnering with leading clientele
               with 15,000+ strong professionals. All our services — Housekeeping,
@@ -54,19 +59,21 @@ export default function About() {
                     <div className="text-lg font-extrabold text-slate-800">
                       {item.value}
                     </div>
-                    <div className="text-xs text-slate-400">{item.label}</div>
+                    <div className="text-xs text-slate-500">{item.label}</div>
                   </div>
                 </div>
               ))}
             </div>
 
-            <Link
-              href="/about"
-              className="group mt-8 inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-xl transition-all shadow-lg shadow-blue-500/25 hover:shadow-xl active:scale-95"
-            >
-              <span>Learn More About Us</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition" />
-            </Link>
+            {!isAboutPage && (
+              <Link
+                href="/about"
+                className="group mt-8 inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-xl transition-all shadow-lg shadow-blue-500/25 hover:shadow-xl active:scale-95"
+              >
+                <span>Learn More About Us</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition" />
+              </Link>
+            )}
           </motion.div>
 
           <motion.div
@@ -85,7 +92,7 @@ export default function About() {
                 height={500}
                 className="w-full h-[400px] sm:h-[500px] object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 to-transparent" />
             </div>
 
             <motion.div
@@ -93,7 +100,7 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 }}
               viewport={{ once: true }}
-              className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-xl border border-slate-200/80 max-w-[200px]"
+              className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-xl border border-slate-200/80 max-w-[200px] z-20"
             >
               <div className="text-2xl font-extrabold text-blue-600 font-heading">
                 20M+

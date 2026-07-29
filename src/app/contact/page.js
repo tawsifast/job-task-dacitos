@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
+import PageBanner from "@/components/PageBanner";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -12,30 +13,14 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-24 sm:pt-28">
-      <section className="py-16 sm:py-20 bg-slate-50/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-3xl"
-          >
-            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-blue-50 border border-blue-200 text-blue-700 mb-4">
-              Contact Us
-            </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight font-heading leading-tight">
-              Get in{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent">
-                Touch
-              </span>
-            </h1>
-            <p className="mt-6 text-lg text-slate-500 leading-relaxed max-w-2xl">
-              Have a question about our services? Want to request a quote? We&apos;d
-              love to hear from you.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+    <div>
+      <PageBanner
+        label="Contact Us"
+        title="Get in"
+        highlight="Touch"
+        subtitle="Have a question about our services? Want to request a quote? We'd love to hear from you."
+        image="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1600&q=85"
+      />
 
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

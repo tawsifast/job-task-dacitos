@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { extendedBenefits } from "@/data/siteData";
+import PageBanner from "@/components/PageBanner";
 
 const certifications = [
   "ISO 9001:2015 Certified",
@@ -28,31 +29,13 @@ const itemVariants = {
 
 export default function OurStrengthPage() {
   return (
-    <div className="pt-24 sm:pt-28">
-      <section className="py-16 sm:py-20 bg-slate-50/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-3xl"
-          >
-            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-blue-50 border border-blue-200 text-blue-700 mb-4">
-              Our Strength
-            </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight font-heading leading-tight">
-              What Sets{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent">
-                Us Apart
-              </span>
-            </h1>
-            <p className="mt-6 text-lg text-slate-500 leading-relaxed max-w-2xl">
-              Decades of experience, thousands of trained professionals, and an
-              unwavering commitment to service excellence — discover what makes
-              AmazePMS the preferred partner for 200+ enterprises.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+    <div>
+      <PageBanner
+        label="Our Strength"
+        title="What Sets Us Apart"
+        subtitle="Decades of experience, thousands of trained professionals, and an unwavering commitment to service excellence — discover what makes AmazePMS the preferred partner for 200+ enterprises."
+        image="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=85"
+      />
 
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

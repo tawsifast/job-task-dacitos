@@ -117,7 +117,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-slate-900">
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-slate-900 pt-16 sm:pt-20">
       <AnimatePresence custom={direction}>
         <motion.div
           key={current}

@@ -2,9 +2,9 @@ import Link from "next/link";
 import Hero from "@/components/Hero";
 import Clients from "@/components/Clients";
 import About from "@/components/About";
+import WhyChooseUs from "@/components/WhyChooseUs";
 import Stats from "@/components/Stats";
 import Services from "@/components/Services";
-import WhyChooseUs from "@/components/WhyChooseUs";
 import CTA from "@/components/CTA";
 
 export default function Home() {
@@ -14,10 +14,9 @@ export default function Home() {
       <Clients />
       <About />
       <WhyChooseUs />
-      <CTA />
-      <Stats />
+      {/* <Stats /> */}
       <section className="relative">
-        <Services />
+        {/* <Services /> */}
         <div className="text-center pb-12 sm:pb-16 -mt-8">
           <Link
             href="/services"
@@ -28,6 +27,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
+      <CTA />
     </>
   );
 }
