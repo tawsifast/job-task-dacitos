@@ -117,7 +117,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[80vh] flex flex-col justify-center overflow-hidden bg-slate-900 pt-16 sm:pt-20">
+    <section className="relative min-h-[70vh] flex flex-col justify-center overflow-hidden bg-slate-900 pt-16 sm:pt-20">
       <AnimatePresence custom={direction}>
         <motion.div
           key={current}
@@ -165,7 +165,7 @@ export default function Hero() {
                 </div>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] font-heading text-white">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] font-heading text-white">
                 {banner.title}.{" "}
                 <span className="text-blue-300">
                   {banner.highlight}
@@ -199,14 +199,14 @@ export default function Hero() {
       <button
         onClick={prev}
         aria-label="Previous banner"
-        className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-30 p-2.5 sm:p-3 rounded-full bg-white/90 hover:bg-white border border-slate-200 shadow-lg hover:shadow-xl text-slate-700 hover:text-blue-600 transition-all active:scale-90"
+        className="absolute left-8 sm:left-14 top-1/2 -translate-y-1/2 z-30 p-2.5 sm:p-3 rounded-full bg-white/90 hover:bg-white shadow-lg hover:shadow-xl text-slate-700 hover:text-blue-600 transition-all active:scale-90"
       >
         <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
       <button
         onClick={next}
         aria-label="Next banner"
-        className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-30 p-2.5 sm:p-3 rounded-full bg-white/90 hover:bg-white border border-slate-200 shadow-lg hover:shadow-xl text-slate-700 hover:text-blue-600 transition-all active:scale-90"
+        className="absolute right-8 sm:right-14 top-1/2 -translate-y-1/2 z-30 p-2.5 sm:p-3 rounded-full bg-white/90 hover:bg-white shadow-lg hover:shadow-xl text-slate-700 hover:text-blue-600 transition-all active:scale-90"
       >
         <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>

@@ -230,10 +230,10 @@ export const galleryImages = [
   { src: "https://images.unsplash.com/photo-1558002038-1055907df827?w=600&q=80", category: "security", title: "Security Personnel on Duty" },
   { src: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80", category: "housekeeping", title: "Professional Cleaning Services" },
   { src: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80", category: "technical", title: "Technical Maintenance" },
-  { src: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80", category: "landscaping", title: "Garden Maintenance" },
+  { src: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80", category: "landscaping", title: "Garden Maintenance" },
   { src: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80", category: "technical", title: "Building Operations" },
-  { src: "https://images.unsplash.com/photo-1632935318671-9cb8c88f50a0?w=600&q=80", category: "housekeeping", title: "Pest Control Treatment" },
-  { src: "https://images.unsplash.com/photo-1541888946425-d81bb46b70a0?w=600&q=80", category: "technical", title: "Infrastructure Management" },
+  { src: "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=600&q=80", category: "housekeeping", title: "Pest Control Treatment" },
+  { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80", category: "technical", title: "Infrastructure Management" },
   { src: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80", category: "security", title: "Warehouse Security" },
   { src: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=600&q=80", category: "landscaping", title: "Corporate Park Landscaping" },
 ];
