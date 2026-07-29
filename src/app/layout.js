@@ -1,5 +1,6 @@
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
+import TopContactBar from "@/components/TopContactBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${inter.variable} ${plusJakarta.variable}`}>
       <body className="font-sans bg-white text-slate-800 antialiased selection:bg-blue-500 selection:text-white">
         <SmoothScroll>
+          <TopContactBar />
           <Navbar />
           <main className="min-h-screen">{children}</main>
           <Footer />
