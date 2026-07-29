@@ -22,6 +22,9 @@ export const metadata = {
   title: "AmazePMS | Smart Property Operations & Facility Management",
   description:
     "A one stop solutions for all your property management needs. Security, Housekeeping, MEP, Pest Control, Landscaping & more across India.",
+  icons: {
+    icon: "/gemini-svg.svg",
+  },
 };
 
 export default function RootLayout({ children }) {
